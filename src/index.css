@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App {
+  display: grid;
+  justify-content: center;
+}
+/* Screen Section */
+input{
+  width: 36vw;
+  height: 9vh;
+}
+/* Button collection class */
+.btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
