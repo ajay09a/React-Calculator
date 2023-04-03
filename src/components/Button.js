@@ -8,7 +8,7 @@ const Button = ({value}) => {
     
     return (
         <div>
-            <button value={data} onClick={handleClick}>{value}</button>
+            <button className='singleBtn' value={data} onClick={handleClick}>{value}</button>
         </div>
     )
 }

@@ -16,15 +16,29 @@ code {
 .App {
   display: grid;
   justify-content: center;
+  margin-top: 14vh;
 }
 /* Screen Section */
 input{
   width: 36vw;
   height: 9vh;
+  border: 2px solid;
+  padding: 10px 0px 9px 3px;
 }
 /* Button collection class */
 .btns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    border: 2px solid;
+    background: black;
+    border-radius: 6px;
+}
+button.singleBtn {
+  height: 57px;
+  width: 80px;
+  font-size: larger;
+    background: black;
+    color: white;
+    cursor: pointer;
 }
