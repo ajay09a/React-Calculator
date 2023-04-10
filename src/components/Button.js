@@ -1,15 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Button = ({value}) => {
-    const [data, setdata] = useState('')
-    const handleClick = ()=>{
-        console.log(value)
-    }
+const Button = ({value, onClick}) => {
+    
     
     return (
-        <div>
-            <button className='singleBtn' value={data} onClick={handleClick}>{value}</button>
-        </div>
+            <button className='singleBtn' value={value} onClick={onClick} >{value}</button>
     )
 }
 

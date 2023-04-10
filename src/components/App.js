@@ -1,42 +1,47 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Screen from "./Screen";
 import Button from "./Button";
 
 function App() {
+  const [btn, setbtn] = useState("")
   const data = [
-    1, 2, 3, 4,
-    5, 6, 7, 8
+    "C", "+/-", "%", "/",
+    7, 8, 9, "*",
+    4, 5, 6, "+",
+    1, 2, 3, "-",
+    ".", 0, null, "=",
   ]
+  const handleClick = (e)=>{
+    e.preventDefault();
+    const btnValue = e.target.value;
+    setbtn(btn+btnValue);
+  }
+  const resetHandle = (e)=>{
+    e.preventDefault();
+    setbtn("");
+  }
+  const changesign = (e)=>{
+    e.preventDefault();
+    setbtn("");
+  }
+  const equalto = (e)=>{
+    e.preventDefault();
+    const total = eval(btn);
+    setbtn(total);
+  }
   return (
     <div className="App">
-      <Screen />
+      <Screen value={btn} />
       <div className="btns">
       {
         data.map((value)=>{
           return(
-            <Button value={value}/>
+            <Button value={value} onClick={
+              value==="="?equalto:
+              value==="+/-"?changesign:
+              value==="C"?resetHandle:handleClick}/>
           )
         })}
-        {/* <Button value={`C`} />
-        <Button value={`+/-`} />
-        <Button value={`%`} />
-        <Button value={`/`} />
-        <Button value={7} />
-        <Button value={8} />
-        <Button value={9} />
-        <Button value={`X`} />
-        <Button value={4} />
-        <Button value={5} />
-        <Button value={6} />
-        <Button value={`+`} />
-        <Button value={3} />
-        <Button value={2} />
-        <Button value={1} />
-        <Button value={`-`} />
-        <Button value={`.`} />
-        <Button value={0} />
-        <Button value={null} />
-        <Button value={`=`} /> */}
       </div>
     </div>
   );

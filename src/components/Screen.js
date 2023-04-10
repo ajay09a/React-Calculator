@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Screen = () => {
+const Screen = ({value}) => {
   return (
     <>
-        <input />
+        <input value={value} />
     </>
   )
 }
