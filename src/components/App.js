@@ -22,7 +22,7 @@ function App() {
   }
   const changesign = (e)=>{
     e.preventDefault();
-    setbtn("");
+    setbtn(btn*-1);
   }
   const equalto = (e)=>{
     e.preventDefault();
@@ -31,17 +31,19 @@ function App() {
   }
   return (
     <div className="App">
-      <Screen value={btn} />
-      <div className="btns">
-      {
-        data.map((value)=>{
-          return(
-            <Button value={value} onClick={
-              value==="="?equalto:
-              value==="+/-"?changesign:
-              value==="C"?resetHandle:handleClick}/>
-          )
-        })}
+      <div className="calculator">
+        <Screen value={btn} />
+        <div className="btns">
+        {
+          data.map((value)=>{
+            return(
+              <Button value={value} onClick={
+                value==="="?equalto:
+                value==="+/-"?changesign:
+                value==="C"?resetHandle:handleClick}/>
+            )
+          })}
+        </div>
       </div>
     </div>
   );

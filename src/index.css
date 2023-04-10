@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: #174e237a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,29 +17,46 @@ code {
 .App {
   display: grid;
   justify-content: center;
-  margin-top: 14vh;
+  margin-top: 18vh;
+}
+.calculator {
+  background-color: black;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 /* Screen Section */
-input{
-  width: 316px;
-  height: 9vh;
+.screen {
+  width: 319px;
+  height: 11vh;
   border: 2px solid;
-  padding: 10px 0px 9px 3px;
+  border-radius: 15px;
+  margin: 3px 0px 6px 3px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: white;
+}
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 8px 9px 8px;
+  font-size: larger;
+  font-weight: bold;
 }
 /* Button collection class */
 .btns {
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    border: 2px solid;
-    background: black;
-    border-radius: 6px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  border: 2px solid;
 }
 button.singleBtn {
   height: 57px;
   width: 80px;
   font-size: larger;
-    background: black;
-    color: white;
-    cursor: pointer;
+  background: black;
+  color: white;
+  cursor: pointer;
 }

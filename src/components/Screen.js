@@ -2,9 +2,11 @@ import React from 'react'
 
 const Screen = ({value}) => {
   return (
-    <>
-        <input value={value} />
-    </>
+        <div className='screen'>
+          <div className='input'>
+            {value}
+          </div>
+        </div>
   )
 }
 
